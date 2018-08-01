@@ -116,7 +116,7 @@ public class DocumentPicker extends ReactContextBaseJavaModule implements Activi
         String newPath=uri.toString();
         
         if(newPath.contains("content://")){
-            newPath=FilePath.getPath(this, uri);
+            newPath=FilePath.getPath(getReactApplicationContext(), uri);
         }
 
         map.putString("uri", newPath);
